@@ -40,27 +40,37 @@
 
     </header>
     <section class="hero">
+      <video class="hero__video" muted loop playsinline>
+        <source src="./src/assets/hero-video.mp4" type="video/mp4">
+      </video>
+
       <div class="hero__content">
-        <h1 class="hero__title"><span class="hero__accent">Enjoy</span> premium coffee at our charming cafe</h1>
-        <p class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a
-          popular destination for coffee
-          lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+        <h1 class="hero__title">
+          <span class="hero__accent">Enjoy</span> premium coffee at our charming cafe
+        </h1>
+
+        <p class="hero__text">
+          With its inviting atmosphere and delicious coffee options, the Coffee House
+          Resource is a popular destination for coffee lovers and those seeking a
+          warm and inviting space to enjoy their favorite beverage.
+        </p>
+
         <button class="hero__button button-primary" type="button">Menu</button>
       </div>
     </section>
     <section class="favorite-coffee" id="favorite-coffee">
-      <h2 class="favorite-coffee__title">Choose your favorite coffee</h2>
+      <h2 class="favorite-coffee__title">Choose your <span class="favorite-coffee__accent">favorite</span> coffee</h2>
       <div class="slider">
         <div class="slider__images-wrapper">
-          <button class="slider__arrow slider__arrow_left" type="button"><img src="./src/assets/icons/arrow-left.svg"
-              alt="Arrow Left"></button>
+          <button class="slider__arrow slider__arrow_left" type="button" aria-label="Left"><span
+              class="slider__arrow-icon slider__arrow-icon_left"></span></button>
           <div class="slider__images">
             <div class="slider__slide slider__slide_1 slider__slide_active"></div>
             <div class="slider__slide slider__slide_2"></div>
             <div class="slider__slide slider__slide_3"></div>
           </div>
-          <button class="slider__arrow slider__arrow_right" type="button"><img src="./src/assets/icons/arrow-right.svg"
-              alt="Arrow Right"></button>
+          <button class="slider__arrow slider__arrow_right" type="button" aria-label="Right"><span
+              class="slider__arrow-icon slider__arrow-icon_right"></span></button>
         </div>
         <div class="slider__info slider__info_active">
           <h3 class="slider__title">S’mores Frappuccino</h3>
@@ -68,13 +78,13 @@
             being topped with oat milk.</div>
           <div class="slider__price">$5.50</div>
         </div>
-        <div class="slider__info slider__info_active">
+        <div class="slider__info">
           <h3 class="slider__title">Caramel Macchiato</h3>
           <div class="slider__text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream
             under whipped thick foam.</div>
           <div class="slider__price">$5.00</div>
         </div>
-        <div class="slider__info slider__info_active">
+        <div class="slider__info">
           <h3 class="slider__title">Ice coffee</h3>
           <div class="slider__text">A popular summer drink that tones and invigorates. Prepared from coffee, milk and
             ice.</div>

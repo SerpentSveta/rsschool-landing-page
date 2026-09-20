@@ -105,6 +105,19 @@ h1 {
   line-height: 1.05;
 }
 
+h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  text-align: center;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1440px;
@@ -212,13 +225,26 @@ h1 {
   border: 2px solid transparent;
 }
 
-.menu:after {
+.menu::after {
+  content: '';
   position: absolute;
-  content: url(./assets/icons/coffee-cup.png);
   top: -4px;
   right: -30px;
   width: 20px;
   height: 20px;
+
+  background: url('./assets/icons/coffee-cup.png') center / contain no-repeat;
+
+  opacity: 0;
+  transform: translateX(-5px);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.menu:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .menu:hover::before {
@@ -232,12 +258,31 @@ h1 {
 }
 
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
   margin-top: 20px;
-  background: url(./assets/img-hero.jpg) center 100% no-repeat;
-  border-radius: 40px;
   height: 644px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 530px;
+  margin-left: 100px;
 }
 
 .hero__title {
@@ -249,14 +294,6 @@ h1 {
   font-style: italic;
 }
 
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 530px;
-  margin-left: 100px;
-}
-
 .hero__text {
   color: var(--text-inverse);
 }
@@ -266,11 +303,140 @@ h1 {
   background: var(--text-inverse);
 }
 
-.hero__button:hover::after {
+.hero__button::after {
+  content: '';
   position: absolute;
-  content: url(./assets/icons/coffee-cup.png);
   top: 21px;
   right: 53px;
   width: 20px;
   height: 20px;
+
+  background: url('./assets/icons/coffee-cup.png') center / contain no-repeat;
+
+  opacity: 0;
+  transform: translateX(-5px);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.hero__button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.favorite-coffee {
+  margin-top: 100px;
+}
+
+.favorite-coffee__title {
+  text-align: center;
+}
+
+.favorite-coffee__accent {
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.slider {
+  margin-top: 40px;
+}
+
+.slider__images-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slider__images {
+  width: 480px;
+  height: 480px;
+}
+
+.slider__slide {
+  width: 480px;
+  height: 480px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slider__slide_1 {
+  background: url('./assets/slider/coffee-slider-1.png') center / contain
+    no-repeat;
+}
+
+.slider__arrow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--background-container);
+  border-radius: 100px;
+  transition: background-color 0.3s ease-in;
+}
+
+.slider__arrow:hover {
+  background-color: var(--background-container);
+}
+
+.slider__arrow:hover .slider__arrow-icon {
+  background-color: var(--text-inverse);
+}
+
+.slider__arrow-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--border-inverse);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.slider__arrow-icon_left {
+  mask-image: url('./assets/icons/arrow-left.svg');
+}
+
+.slider__arrow-icon_right {
+  mask-image: url('./assets/icons/arrow-right.svg');
+}
+
+.slider__info {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.slider__info_active {
+  display: flex;
+}
+
+.slider__price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.slider__pagination {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.slider__control {
+  width: 40px;
+  height: 4px;
+  mask-image: url('./assets/icons/control.svg');
+  background-color: var(--border-primary);
+}
+
+.slider__control_active {
+  background-color: var(--background-container);
 }
