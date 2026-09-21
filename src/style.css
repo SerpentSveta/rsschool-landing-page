@@ -109,7 +109,7 @@ h2 {
   font-size: 60px;
   font-weight: 600;
   line-height: 1.25;
-  text-align: center;
+  text-align: left;
 }
 
 h3 {
@@ -373,6 +373,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 160px;
   width: 60px;
   height: 60px;
   border: 1px solid var(--background-container);
@@ -411,7 +412,10 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
   margin-top: 20px;
+  text-align: center;
 }
 
 .slider__info_active {
@@ -486,6 +490,11 @@ h3 {
   width: 630px;
 }
 
+.button-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
 .mobile-app__button {
   position: relative;
   padding: 12px 20px;
@@ -511,7 +520,7 @@ h3 {
 }
 
 .button__content--apple {
-  padding-left: 35px;
+  padding-left: 42px;
 }
 
 .button__content--google {
