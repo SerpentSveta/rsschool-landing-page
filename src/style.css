@@ -490,13 +490,24 @@ h3 {
   position: relative;
   padding: 12px 20px;
   border: 1px solid var(--background-container);
+  transition: background-color 0.3s ease-in;
+}
+
+.mobile-app__button:hover {
+  background-color: var(--background-container);
+  cursor: pointer;
 }
 
 .button__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2px;
   text-align: left;
+}
+
+.mobile-app__button:hover .button__content {
+  color: var(--text-inverse);
 }
 
 .button__content--apple {
@@ -512,22 +523,28 @@ h3 {
   position: absolute;
 }
 
+.mobile-app__button:hover .button__content::before {
+  background-color: var(--text-inverse);
+}
+
 .button__content--apple::before {
-  top: 15px;
-  left: 24px;
+  top: 0;
+  left: 0;
   width: 27px;
   height: 32px;
 
-  background: url('./assets/icons/apple.svg') center / contain no-repeat;
+  background-color: var(--text-primary);
+  mask: url('./assets/icons/apple.svg') center / contain no-repeat;
 }
 
 .button__content--google::before {
-  top: 15px;
-  left: 24px;
+  top: 0;
+  left: 0;
   width: 36px;
   height: 36px;
 
-  background: url('./assets/icons/google.svg') center / contain no-repeat;
+  background-color: var(--text-primary);
+  mask: url('./assets/icons/google.svg') center / contain no-repeat;
 }
 
 .button__text {
@@ -540,4 +557,133 @@ h3 {
 .button__title {
   font-weight: 600;
   text-align: left;
+}
+
+footer {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  border-radius: 40px;
+  background-color: var(--background-container);
+}
+
+.footer__container {
+  display: flex;
+  padding: 100px;
+  gap: 100px;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 530px;
+  text-align: left;
+}
+
+.footer__title {
+  color: var(--text-inverse);
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-primary);
+  border-radius: 100px;
+  width: 60px;
+  height: 60px;
+  transition: background-color 0.3s ease-in;
+}
+
+.social-icons__item {
+  background-color: var(--background-container);
+}
+
+.social-icons__item:hover {
+  background-color: var(--text-inverse);
+  cursor: pointer;
+}
+
+.social-icons__item:hover .social-icons__link {
+  background-color: var(--text-primary);
+}
+
+.social-icons__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--text-inverse);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.social-icons__link--twitter {
+  mask-image: url('./assets/icons/twitter.svg');
+}
+
+.social-icons__link--instagram {
+  mask-image: url('./assets/icons/instagram.svg');
+}
+
+.social-icons__link--facebook {
+  mask-image: url('./assets/icons/facebook.svg');
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.contacts__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--text-inverse);
+}
+
+.contacts__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts__item {
+  display: flex;
+  gap: 4px;
+  font-weight: 600;
+  color: var(--text-inverse);
+}
+
+.contact__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: var(--text-inverse);
+}
+
+.contact__icon_pin {
+  background: url(./assets/icons/pin-alt.svg) center / contain no-repeat;
+}
+
+.contact__icon_tel {
+  background: url(./assets/icons/phone.svg) center / contain no-repeat;
+}
+
+.contact__icon_time {
+  background: url(./assets/icons/clock.svg) center / contain no-repeat;
+}
+
+.contact__text {
+  font-weight: 600;
+  color: var(--text-inverse);
 }
