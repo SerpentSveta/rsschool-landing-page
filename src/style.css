@@ -109,6 +109,7 @@ h2 {
   font-size: 60px;
   font-weight: 600;
   line-height: 1.25;
+  text-align: center;
 }
 
 h3 {
@@ -333,7 +334,7 @@ h3 {
   text-align: center;
 }
 
-.favorite-coffee__accent {
+.title__accent {
   font-style: italic;
   color: var(--text-accent);
 }
@@ -439,4 +440,28 @@ h3 {
 
 .slider__control_active {
   background-color: var(--background-container);
+}
+
+.about__title {
+  margin-top: 100px;
+}
+
+.gallery {
+  position: relative;
+  overflow-y: hidden;
+  margin-top: 40px;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.gallery__image {
+  border-radius: 20px;
+  width: 660px;
+  height: 430px;
+  margin-bottom: 40px;
+  object-fit: none;
+}
+
+.gallery__image--big {
+  height: 590px;
 }
