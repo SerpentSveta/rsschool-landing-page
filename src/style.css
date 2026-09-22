@@ -224,6 +224,9 @@ h3 {
   margin-right: 31px;
   margin-left: 22px;
   border: 2px solid transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
 }
 
 .menu::after {
@@ -243,19 +246,30 @@ h3 {
     transform 0.3s ease-in-out;
 }
 
-.menu:hover::after {
+.menu:hover::after,
+.menu--active::after {
   opacity: 1;
   transform: translateX(0);
+  pointer-events: none;
+  cursor: default;
 }
 
-.menu:hover::before {
+.menu:hover::before,
+.menu--active::before {
   content: '';
   position: absolute;
   top: 22px;
   left: 0;
   right: -30px;
   border-bottom: 2px solid var(--text-primary);
+}
+
+.menu:hover::before {
   cursor: pointer;
+}
+
+.menu--active {
+  cursor: default;
 }
 
 .hero {
@@ -695,4 +709,88 @@ footer {
 .contact__text {
   font-weight: 600;
   color: var(--text-inverse);
+}
+
+.coffee {
+  margin-top: 20px;
+}
+
+.coffee__title {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.coffee__button-wrapper {
+  display: flex;
+  gap: 16px;
+  width: fit-content;
+  margin: 40px auto 0;
+}
+
+.product-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  border-radius: 100px;
+  border: 1px solid var(--border-primary);
+  padding: 8px 16px 8px 8px;
+  height: 46px;
+  transition: background-color 0.3s ease-in;
+}
+
+.product-switch:hover,
+.product-switch--active {
+  background: var(--background-container);
+}
+
+.product-switch:hover .product-switch__item,
+.product-switch--active .product-switch__item {
+  background: var(--text-inverse);
+}
+
+.product-switch:hover .product-switch__text,
+.product-switch--active .product-switch__text {
+  color: var(--text-inverse);
+}
+
+.product-switch--active {
+  pointer-events: none;
+}
+
+.product-switch__item {
+  position: relative;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  background: var(--border-primary);
+  transition: background-color 0.3s ease-in;
+}
+
+.product-switch__icon {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-switch__item--coffee .product-switch__icon {
+  background: url('./assets/icons/coffee.png') center / contain no-repeat;
+}
+
+.product-switch__item--tea .product-switch__icon {
+  background: url('./assets/icons/teapot.png') center / contain no-repeat;
+}
+
+.product-switch__item--dessert .product-switch__icon {
+  background: url('./assets/icons/dessert-fixed.png') center / contain no-repeat;
+}
+
+.product-switch__text {
+  font-weight: 600;
+  transition: color 0.3s ease-in;
 }
