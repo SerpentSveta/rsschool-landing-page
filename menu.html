@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
-  <title>Catalog</title>
+  <title>Coffee House Menu</title>
 </head>
 
 <body>
@@ -20,7 +19,8 @@
       <a href="./index.html" class="logo"><img src="./src/assets/logo.png" alt="Logo Coffee House"></a>
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="navigation__item"><a href="../index.html#favorite-coffee" class="navigation__link">Favorite coffee</a></li>
+          <li class="navigation__item"><a href="../index.html#favorite-coffee" class="navigation__link">Favorite
+              coffee</a></li>
           <li class="navigation__item"><a href="../index.html#about" class="navigation__link">About</a></li>
           <li class="navigation__item"><a href="../index.html#mobile-app" class="navigation__link">Mobile app</a></li>
           <li class="navigation__item"><a href="../index.html#contact-us" class="navigation__link">Contact us</a></li>
@@ -39,30 +39,34 @@
       </div>
 
     </header>
-    <section class="coffee">
-      <h2 class="coffee__title">Behind each of our cups hides an <span class="title__accent">amazing surprise</span>
-      </h2>
-      <div class="coffee__button-wrapper">
-        <button class="product-switch product-switch--active" type="button" aria-label="Coffee">
-          <span class="product-switch__item product-switch__item--coffee">
-            <span class="product-switch__icon"></span>
-          </span>
-          <span class="product-switch__text">Coffee</span>
-        </button>
-        <button class="product-switch" type="button" aria-label="Tea">
-          <span class="product-switch__item product-switch__item--tea">
-            <span class="product-switch__icon"></span>
-          </span>
-          <span class="product-switch__text">Tea</span>
-        </button>
-        <button class="product-switch" type="button" aria-label="Dessert">
-          <span class="product-switch__item product-switch__item--dessert">
-            <span class="product-switch__icon"></span>
-          </span>
-          <span class="product-switch__text">Dessert</span>
-        </button>
-      </div>
-    </section>
+    <main>
+      <h1 class="visually-hidden">Coffee House Menu</h1>
+      <section class="coffee">
+        <h2 class="coffee__title">Behind each of our cups hides an <span class="title__accent">amazing surprise</span>
+        </h2>
+        <div class="coffee__button-wrapper">
+          <button class="product-switch product-switch--active" type="button" aria-label="Coffee">
+            <span class="product-switch__item product-switch__item--coffee">
+              <span class="product-switch__icon"></span>
+            </span>
+            <span class="product-switch__text">Coffee</span>
+          </button>
+          <button class="product-switch" type="button" aria-label="Tea">
+            <span class="product-switch__item product-switch__item--tea">
+              <span class="product-switch__icon"></span>
+            </span>
+            <span class="product-switch__text">Tea</span>
+          </button>
+          <button class="product-switch" type="button" aria-label="Dessert">
+            <span class="product-switch__item product-switch__item--dessert">
+              <span class="product-switch__icon"></span>
+            </span>
+            <span class="product-switch__text">Dessert</span>
+          </button>
+        </div>
+        <div class="cards__wrapper"></div>
+      </section>
+    </main>
     <footer id="contact-us">
       <div class="footer__container">
         <div class="footer__info">
@@ -98,6 +102,7 @@
     </footer>
   </div>
   <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/menu.js"></script>
 </body>
 
 </html>

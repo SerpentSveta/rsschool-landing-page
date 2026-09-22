@@ -5,7 +5,7 @@
     "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
     "price": "7.00",
     "category": "coffee",
-    "image": "/images/coffee/irish-coffee.jpg",
+    "image": "images/coffee/irish-coffee.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -42,7 +42,7 @@
     "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
     "price": "7.00",
     "category": "coffee",
-    "image": "/images/coffee/kahlua-coffee.jpg",
+    "image": "images/coffee/kahlua-coffee.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -79,7 +79,7 @@
     "description": "Espresso with frothed milk, cream and aromatic honey",
     "price": "5.50",
     "category": "coffee",
-    "image": "/images/coffee/honey-raf.jpg",
+    "image": "images/coffee/honey-raf.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -116,7 +116,7 @@
     "description": "Cappuccino with soft thick foam in summer version with ice",
     "price": "5.00",
     "category": "coffee",
-    "image": "/images/coffee/ice-cappuccino.jpg",
+    "image": "images/coffee/ice-cappuccino.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -153,7 +153,7 @@
     "description": "Classic black coffee",
     "price": "4.50",
     "category": "coffee",
-    "image": "/images/coffee/espresso.jpg",
+    "image": "images/coffee/espresso.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -190,7 +190,7 @@
     "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
     "price": "5.50",
     "category": "coffee",
-    "image": "/images/coffee/latte.jpg",
+    "image": "images/coffee/latte.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -227,7 +227,7 @@
     "description": "Espresso with frothed milk and chocolate",
     "price": "5.50",
     "category": "coffee",
-    "image": "/images/coffee/latte-macchiato.jpg",
+    "image": "images/coffee/latte-macchiato.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -264,7 +264,7 @@
     "description": "Fragrant black coffee with cognac and whipped cream",
     "price": "6.50",
     "category": "coffee",
-    "image": "/images/coffee/coffee-with-cognac.jpg",
+    "image": "images/coffee/coffee-with-cognac.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -301,7 +301,7 @@
     "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
     "price": "4.50",
     "category": "tea",
-    "image": "/images/tea/moroccan.jpg",
+    "image": "images/tea/moroccan.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -338,7 +338,7 @@
     "description": "Original black tea with fresh ginger, lemon and honey",
     "price": "5.00",
     "category": "tea",
-    "image": "/images/tea/ginger.jpg",
+    "image": "images/tea/ginger.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -375,7 +375,7 @@
     "description": "Invigorating black tea with cranberry and honey",
     "price": "5.00",
     "category": "tea",
-    "image": "/images/tea/cranberry.jpg",
+    "image": "images/tea/cranberry.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -412,7 +412,7 @@
     "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
     "price": "5.50",
     "category": "tea",
-    "image": "/images/tea/sea-buckthorn.jpg",
+    "image": "images/tea/sea-buckthorn.jpg",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -449,7 +449,7 @@
     "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
     "price": "3.50",
     "category": "dessert",
-    "image": "/images/desserts/marble-cheesecake.jpg",
+    "image": "images/desserts/marble-cheesecake.jpg",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -486,7 +486,7 @@
     "description": "Layer cake with cream cheese frosting",
     "price": "4.00",
     "category": "dessert",
-    "image": "/images/desserts/red-velvet.jpg",
+    "image": "images/desserts/red-velvet.jpg",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -523,7 +523,7 @@
     "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
     "price": "4.50",
     "category": "dessert",
-    "image": "/images/desserts/cheesecakes.jpg",
+    "image": "images/desserts/cheesecakes.jpg",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -560,7 +560,7 @@
     "description": "Delicate creamy dessert in a caramel basket with wild berries",
     "price": "4.00",
     "category": "dessert",
-    "image": "/images/desserts/creme-brulee.jpg",
+    "image": "images/desserts/creme-brulee.jpg",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -597,7 +597,7 @@
     "description": "Tender pancakes with strawberry jam and fresh strawberries",
     "price": "4.50",
     "category": "dessert",
-    "image": "/images/desserts/pancakes.jpg",
+    "image": "images/desserts/pancakes.jpg",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -634,7 +634,7 @@
     "description": "Classic honey cake with delicate custard",
     "price": "4.50",
     "category": "dessert",
-    "image": "/images/desserts/honey-cake.jpg",
+    "image": "images/desserts/honey-cake.jpg",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -671,7 +671,7 @@
     "description": "Cake with hot chocolate filling and nuts with dried apricots",
     "price": "5.50",
     "category": "dessert",
-    "image": "/images/desserts/chocolate-cake.jpg",
+    "image": "images/desserts/chocolate-cake.jpg",
     "sizes": {
       "s": {
         "size": "50 g",
@@ -708,7 +708,7 @@
     "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
     "price": "6.50",
     "category": "dessert",
-    "image": "/images/desserts/black-forest.jpg",
+    "image": "images/desserts/black-forest.jpg",
     "sizes": {
       "s": {
         "size": "50 g",

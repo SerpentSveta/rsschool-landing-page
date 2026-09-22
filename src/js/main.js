@@ -1,4 +1,6 @@
-import '../style.css'
+import '../style.css';
 
-const heroVideo = document.querySelector('.hero__video')
-heroVideo.play()
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo) {
+  heroVideo.play();
+}

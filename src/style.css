@@ -119,6 +119,17 @@ h3 {
   text-align: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1440px;
@@ -487,6 +498,7 @@ h3 {
 
 .gallery__image:hover {
   transform: scale(0.9);
+  cursor: pointer;
 }
 
 .mobile-app {
@@ -798,4 +810,48 @@ footer {
 .product-switch__text {
   font-weight: 600;
   transition: color 0.3s ease-in;
+}
+
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-primary);
+  border-radius: 40px;
+  width: 310px;
+}
+
+.card:hover .card__image {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.card__price {
+  margin-top: auto;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
 }
