@@ -749,7 +749,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3px;
+  gap: 8px;
   border-radius: 100px;
   border: 1px solid var(--border-primary);
   padding: 8px 16px 8px 8px;
