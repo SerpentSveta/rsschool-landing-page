@@ -103,6 +103,10 @@ h1 {
   font-size: 72px;
   font-weight: 600;
   line-height: 1.05;
+  @media (max-width: 700px) {
+    font-size: 42px;
+    line-height: 1.15;
+  }
 }
 
 h2 {
@@ -110,6 +114,9 @@ h2 {
   font-weight: 600;
   line-height: 1.25;
   text-align: left;
+  @media (max-width: 500px) {
+    font-size: 32px;
+  }
 }
 
 h3 {
@@ -137,6 +144,9 @@ h3 {
   padding: 0 40px;
   overflow: hidden;
   position: relative;
+  @media (max-width: 500px) {
+    padding: 0 16px;
+  }
 }
 
 .header {
@@ -288,6 +298,9 @@ h3 {
   @media (max-width: 768px) {
     gap: 24px;
   }
+  @media (max-width: 500px) {
+    gap: 12px;
+  }
 }
 
 .menu {
@@ -396,6 +409,9 @@ h3 {
   height: 644px;
   overflow: hidden;
   border-radius: 40px;
+  @media (max-width: 700px) {
+    height: 552px;
+  }
 }
 
 .hero__video {
@@ -414,9 +430,13 @@ h3 {
   gap: 40px;
   max-width: 530px;
   margin-left: 100px;
+  padding: 0 16px;
 
   @media (max-width: 768px) {
     margin-left: 60px;
+  }
+  @media (max-width: 700px) {
+    margin-left: 0;
   }
 }
 
@@ -494,11 +514,18 @@ h3 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: 700px) {
+    justify-content: center;
+  }
 }
 
 .slider__images {
   width: 480px;
   height: 480px;
+  @media (max-width: 700px) {
+    width: 348px;
+    height: 348px;
+  }
 }
 
 .slider__slide {
@@ -507,11 +534,21 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  @media (max-width: 700px) {
+    width: 348px;
+    height: 348px;
+  }
 }
 
 .slider__slide_1 {
   background: url('./assets/slider/coffee-slider-1.png') center / contain
     no-repeat;
+}
+
+.button__container {
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 
 .slider__arrow {
@@ -615,6 +652,10 @@ h3 {
   @media (max-width: 768px) {
     text-align: center;
   }
+  @media (max-width: 500px) {
+    text-align: left;
+    letter-spacing: 1px;
+  }
 }
 
 .gallery {
@@ -668,15 +709,17 @@ h3 {
     align-items: start;
     gap: 100px;
   }
+  @media (max-width: 450px) {
+    gap: 40px;
+  }
 }
 
 .mobile-app__image {
-  width: 630px;
-  height: 630px;
+  width: 100%;
+  max-width: 630px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
   background: url('./assets/mobile-screens.png') center / contain no-repeat;
-  @media (max-width: 1000px) {
-    margin: 0 auto;
-  }
 }
 
 .mobile-app__info {
@@ -692,6 +735,7 @@ h3 {
 .button-wrapper {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .mobile-app__button {
@@ -799,6 +843,10 @@ footer {
   @media (max-width: 1000px) {
     flex-direction: column;
     padding: 100px 60px;
+  }
+  @media (max-width: 400px) {
+    padding: 60px 16px;
+    gap: 40px;
   }
 }
 
@@ -946,6 +994,9 @@ footer {
   margin: 0 auto;
   max-width: 800px;
   text-align: center;
+  @media (max-width: 400px) {
+    letter-spacing: 1px;
+  }
 }
 
 .coffee__button-wrapper {
@@ -953,6 +1004,9 @@ footer {
   gap: 16px;
   width: fit-content;
   margin: 40px auto 0;
+  @media (max-width: 400px) {
+    gap: 8px;
+  }
 }
 
 .product-switch {
@@ -1032,9 +1086,10 @@ footer {
 .cards__wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   gap: 40px;
   margin-top: 40px;
-  align-items: stretch;
 }
 
 .card {
