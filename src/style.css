@@ -322,7 +322,7 @@ h3 {
 .menu::after {
   content: '';
   position: absolute;
-  top: -4px;
+  top: 0;
   right: -30px;
   width: 20px;
   height: 20px;
@@ -330,7 +330,7 @@ h3 {
 
   background: url('./assets/icons/coffee-cup.png') center / contain no-repeat;
 
-  opacity: 0;
+  opacity: 1;
   transform: translateX(-5px);
   transition:
     opacity 0.3s ease-in-out,
@@ -344,8 +344,6 @@ h3 {
 
 .menu:hover::after,
 .menu--active::after {
-  opacity: 1;
-  transform: translateX(0);
   pointer-events: none;
   cursor: default;
 }
@@ -354,7 +352,7 @@ h3 {
 .menu--active::before {
   content: '';
   position: absolute;
-  top: 22px;
+  top: 28px;
   left: 0;
   right: -30px;
   border-bottom: 2px solid var(--text-primary);
@@ -659,10 +657,9 @@ h3 {
 }
 
 .gallery {
-  position: relative;
-  margin-top: 40px;
   column-count: 2;
   column-gap: 40px;
+  margin-top: 40px;
 
   @media (max-width: 768px) {
     column-count: 1;
@@ -670,33 +667,35 @@ h3 {
   }
 }
 
-.gallery__image {
-  display: block;
-  width: 660px;
+.gallery__item {
+  width: 100%;
   height: 430px;
   margin-bottom: 40px;
   border-radius: 20px;
-  object-fit: none;
-  transition: transform 0.3s ease-in-out;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .gallery__image:nth-child(2),
-  .gallery__image:nth-child(3) {
-    display: none;
-  }
-}
-
-.gallery__image--big {
+.gallery__item--big {
   height: 590px;
 }
 
-.gallery__image:hover {
-  transform: scale(0.9);
-  cursor: pointer;
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery__item:hover .gallery__image {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .gallery__item:nth-child(2),
+  .gallery__item:nth-child(3) {
+    display: none;
+  }
 }
 
 .mobile-app {
@@ -1100,17 +1099,24 @@ footer {
   width: 310px;
 }
 
+.card__item {
+  width: 100%;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
 .card:hover .card__image {
-  transform: scale(0.9);
+  transform: scale(1);
   cursor: pointer;
 }
 
 .card__image {
-  display: block;
   width: 100%;
-  height: auto;
-  border-radius: 40px;
-  transition: transform 0.3s ease-in-out;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 .card__description {

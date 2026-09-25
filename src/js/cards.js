@@ -6,12 +6,16 @@ const createCard = (product) => {
   const card = document.createElement('article');
   card.classList.add('card');
 
+  const cardItem = document.createElement('div');
+  cardItem.className = 'card__item';
+  card.append(cardItem);
+
   const cardImg = document.createElement('img');
   cardImg.className = 'card__image';
   cardImg.src = `${product.image}`;
   cardImg.alt = `${product.name}`;
 
-  card.append(cardImg);
+  cardItem.append(cardImg);
 
   const cardDescription = document.createElement('div');
   cardDescription.className = 'card__description';
@@ -28,7 +32,7 @@ const createCard = (product) => {
   cardText.textContent = `${product.description}`;
 
   cardDescription.append(cardText);
-  
+
   const cardPrice = document.createElement('div');
   cardPrice.className = 'card__price';
   cardPrice.textContent = `$${product.price}`;
