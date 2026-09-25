@@ -201,15 +201,17 @@ h3 {
   font-weight: 600;
 }
 
-.navigation__link:hover::before {
-  content: '';
-  position: absolute;
-  top: 22px;
-  left: 0;
-  right: -30px;
-  width: 100%;
-  border-bottom: 2px solid var(--text-primary);
-  cursor: pointer;
+@media (hover: hover) {
+  .navigation__link:hover::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 0;
+    right: -30px;
+    width: 100%;
+    border-bottom: 2px solid var(--text-primary);
+    cursor: pointer;
+  }
 }
 
 .theme-switch {
@@ -272,20 +274,28 @@ h3 {
   mask: url('./assets/icons/moon.svg') center / contain no-repeat;
 }
 
-.theme-switch:hover .theme-switch__item_moon {
-  background-color: var(--border-inverse);
+@media (hover: hover) {
+  .theme-switch:hover .theme-switch__item_moon {
+    background-color: var(--border-inverse);
+  }
 }
 
-[data-theme='dark'] .theme-switch:hover .theme-switch__item_moon {
-  background-color: var(--text-accent);
+@media (hover: hover) {
+  [data-theme='dark'] .theme-switch:hover .theme-switch__item_moon {
+    background-color: var(--text-accent);
+  }
 }
 
-[data-theme='dark'] .theme-switch:hover .theme-switch__item_sun {
-  background-color: var(--background-container);
+@media (hover: hover) {
+  [data-theme='dark'] .theme-switch:hover .theme-switch__item_sun {
+    background-color: var(--background-container);
+  }
 }
 
-.theme-switch:hover .theme-switch__item_moon .theme-switch__icon {
-  background-color: var(--text-inverse);
+@media (hover: hover) {
+  .theme-switch:hover .theme-switch__item_moon .theme-switch__icon {
+    background-color: var(--text-inverse);
+  }
 }
 
 .header__actions {
@@ -342,13 +352,11 @@ h3 {
     no-repeat;
 }
 
-.menu:hover::after,
 .menu--active::after {
   pointer-events: none;
   cursor: default;
 }
 
-.menu:hover::before,
 .menu--active::before {
   content: '';
   position: absolute;
@@ -358,8 +366,24 @@ h3 {
   border-bottom: 2px solid var(--text-primary);
 }
 
-.menu:hover::before {
-  cursor: pointer;
+@media (hover: hover) {
+  .menu:hover::after {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .menu:hover::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 0;
+    right: -30px;
+    border-bottom: 2px solid var(--text-primary);
+  }
+
+  .menu:hover::before {
+    cursor: pointer;
+  }
 }
 
 .menu--active {
@@ -486,8 +510,10 @@ h3 {
     no-repeat;
 }
 
-.hero__button:hover::after {
-  opacity: 1;
+@media (hover: hover) {
+  .hero__button:hover::after {
+    opacity: 1;
+  }
 }
 
 .favorite-coffee {
@@ -568,16 +594,18 @@ h3 {
   border: 1px solid var(--border-inverse);
 }
 
-.slider__arrow:hover {
-  background-color: var(--background-container);
-}
+@media (hover: hover) {
+  .slider__arrow:hover {
+    background-color: var(--background-container);
+  }
 
-[data-theme='dark'] .slider__arrow:hover {
-  border: 1px solid transparent;
-}
+  [data-theme='dark'] .slider__arrow:hover {
+    border: 1px solid transparent;
+  }
 
-.slider__arrow:hover .slider__arrow-icon {
-  background-color: var(--text-inverse);
+  .slider__arrow:hover .slider__arrow-icon {
+    background-color: var(--text-inverse);
+  }
 }
 
 .slider__arrow-icon {
@@ -686,9 +714,10 @@ h3 {
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
 }
-
-.gallery__item:hover .gallery__image {
-  transform: scale(1);
+@media (hover: hover) {
+  .gallery__item:hover .gallery__image {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 768px) {
@@ -750,13 +779,15 @@ h3 {
   border: 1px solid var(--border-inverse);
 }
 
-.mobile-app__button:hover {
-  background-color: var(--background-container);
-  cursor: pointer;
-}
+@media (hover: hover) {
+  .mobile-app__button:hover {
+    background-color: var(--background-container);
+    cursor: pointer;
+  }
 
-[data-theme='dark'] .mobile-app__button:hover {
-  border: 1px solid transparent;
+  [data-theme='dark'] .mobile-app__button:hover {
+    border: 1px solid transparent;
+  }
 }
 
 .button__content {
@@ -767,8 +798,10 @@ h3 {
   text-align: left;
 }
 
-.mobile-app__button:hover .button__content {
-  color: var(--text-inverse);
+@media (hover: hover) {
+  .mobile-app__button:hover .button__content {
+    color: var(--text-inverse);
+  }
 }
 
 .button__content--apple {
@@ -784,8 +817,10 @@ h3 {
   position: absolute;
 }
 
-.mobile-app__button:hover .button__content::before {
-  background-color: var(--text-inverse);
+@media (hover: hover) {
+  .mobile-app__button:hover .button__content::before {
+    background-color: var(--text-inverse);
+  }
 }
 
 .button__content--apple::before {
@@ -885,18 +920,20 @@ footer {
   background-color: var(--background-container);
 }
 
-.social-icons__item:hover {
-  background-color: var(--text-inverse);
-  cursor: pointer;
-}
+@media (hover: hover) {
+  .social-icons__item:hover {
+    background-color: var(--text-inverse);
+    cursor: pointer;
+  }
 
-[data-theme='dark'] .social-icons__item:hover {
-  background-color: var(--background-page);
-  border: 1px solid transparent;
-}
+  [data-theme='dark'] .social-icons__item:hover {
+    background-color: var(--background-page);
+    border: 1px solid transparent;
+  }
 
-.social-icons__item:hover .social-icons__link {
-  background-color: var(--text-primary);
+  .social-icons__item:hover .social-icons__link {
+    background-color: var(--text-primary);
+  }
 }
 
 .social-icons__link {
@@ -952,13 +989,15 @@ footer {
   color: var(--text-inverse);
 }
 
-.contacts__item:hover::before {
-  content: '';
-  position: absolute;
-  top: 24px;
-  left: 0;
-  right: 0;
-  border-bottom: 2px solid var(--text-inverse);
+@media (hover: hover) {
+  .contacts__item:hover::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid var(--text-inverse);
+  }
 }
 
 .contact__icon {
@@ -1022,20 +1061,30 @@ footer {
     border-color 0.3s ease-in;
 }
 
-.product-switch:hover,
 .product-switch--active {
   background: var(--background-container);
   border: 1px solid transparent;
 }
 
-.product-switch:hover .product-switch__item,
 .product-switch--active .product-switch__item {
   background: var(--text-inverse);
 }
 
-.product-switch:hover .product-switch__text,
 .product-switch--active .product-switch__text {
   color: var(--text-inverse);
+}
+
+@media (hover: hover) {
+  .product-switch:hover {
+    background: var(--background-container);
+    border: 1px solid transparent;
+  }
+  .product-switch:hover .product-switch__item {
+    background: var(--text-inverse);
+  }
+  .product-switch:hover .product-switch__text {
+    color: var(--text-inverse);
+  }
 }
 
 .product-switch--active {
@@ -1106,9 +1155,11 @@ footer {
   overflow: hidden;
 }
 
-.card:hover .card__image {
-  transform: scale(1);
-  cursor: pointer;
+@media (hover: hover) {
+  .card:hover .card__image {
+    transform: scale(1);
+    cursor: pointer;
+  }
 }
 
 .card__image {
