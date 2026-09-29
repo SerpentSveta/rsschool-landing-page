@@ -367,10 +367,10 @@ h3 {
     transform 0.3s ease-in-out;
 
   @media (max-width: 768px) {
+    position: static;
     width: 40px;
     height: 40px;
-    right: 0;
-    left: 103px;
+    transform: none;
   }
 }
 
@@ -426,7 +426,9 @@ h3 {
 .menu__mobile {
   display: none;
   @media (max-width: 768px) {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
     margin: 60px 0 0;
     font-size: 32px;
   }
@@ -597,25 +599,23 @@ h3 {
   }
 }
 
-.slider__images {
-  width: 480px;
+.slider__viewport {
+  width: 100%;
   height: 480px;
-  @media (max-width: 700px) {
-    width: 348px;
-    height: 348px;
-  }
+  overflow: hidden;
+}
+
+.slider__images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .slider__slide {
-  width: 480px;
+  flex: 0 0 100%;
+  width: 100%;
   height: 480px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  @media (max-width: 700px) {
-    width: 348px;
-    height: 348px;
-  }
 }
 
 .slider__slide_1 {
@@ -623,7 +623,18 @@ h3 {
     no-repeat;
 }
 
+.slider__slide_2 {
+  background: url('./assets/slider/coffee-slider-2.png') center / contain
+    no-repeat;
+}
+
+.slider__slide_3 {
+  background: url('./assets/slider/coffee-slider-3.png') center / contain
+    no-repeat;
+}
+
 .button__container {
+  flex: 0 0 auto;
   @media (max-width: 500px) {
     display: none;
   }
@@ -684,19 +695,30 @@ h3 {
   mask-image: url('./assets/icons/arrow-right.svg');
 }
 
+.slider__info-viewport {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px auto 0;
+}
+
+.slider__info-wrapper {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
 .slider__info {
-  display: none;
+  flex: 0 0 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  max-width: 480px;
-  margin: 0 auto;
-  margin-top: 20px;
   text-align: center;
 }
 
-.slider__info_active {
-  display: flex;
+.slider__title,
+.slider__text,
+.slider__price {
+  max-width: 480px;
 }
 
 .slider__price {
@@ -721,6 +743,12 @@ h3 {
 
 .slider__control_active {
   background-color: var(--background-container);
+}
+
+@media (hover: hover) {
+  .slider__control:hover {
+    cursor: pointer;
+  }
 }
 
 [data-theme='dark'] .slider__control_active {
