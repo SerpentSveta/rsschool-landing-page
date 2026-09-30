@@ -1,4 +1,5 @@
 import '../style.css';
+import './burger.js'
 
 const heroVideo = document.querySelector('.hero__video');
 if (heroVideo) {

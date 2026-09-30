@@ -1,1 +1,2 @@
-import './cards.js';
+import './main.js';
+import './category-switcher.js'

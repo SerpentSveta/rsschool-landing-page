@@ -1,8 +1,4 @@
-import products from '../data/products.json';
-
-const cardsWrapper = document.querySelector('.cards__wrapper');
-
-const createCard = (product) => {
+export const createCard = (product) => {
   const card = document.createElement('article');
   card.classList.add('card');
 
@@ -41,8 +37,3 @@ const createCard = (product) => {
 
   return card;
 };
-
-products.forEach((product) => {
-  const card = createCard(product);
-  cardsWrapper.append(card);
-});

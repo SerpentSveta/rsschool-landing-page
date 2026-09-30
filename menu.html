@@ -22,12 +22,13 @@
       </a>
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="navigation__item"><a href="../index.html#favorite-coffee" class="navigation__link">Favorite
+          <li class="navigation__item"><a href="index.html#favorite-coffee" class="navigation__link">Favorite
               coffee</a></li>
-          <li class="navigation__item"><a href="../index.html#about" class="navigation__link">About</a></li>
-          <li class="navigation__item"><a href="../index.html#mobile-app" class="navigation__link">Mobile app</a></li>
-          <li class="navigation__item"><a href="../index.html#contact-us" class="navigation__link">Contact us</a></li>
+          <li class="navigation__item"><a href="index.html#about" class="navigation__link">About</a></li>
+          <li class="navigation__item"><a href="index.html#mobile-app" class="navigation__link">Mobile app</a></li>
+          <li class="navigation__item"><a href="#contact-us" class="navigation__link">Contact us</a></li>
         </ul>
+        <a class="menu menu--active menu__mobile" href="./menu.html">Menu</a>
       </nav>
       <div class="header__actions">
         <button class="theme-switch" type="button" aria-label="Toggle theme">
@@ -50,19 +51,19 @@
         <h2 class="coffee__title">Behind each of our cups hides an <span class="title__accent">amazing surprise</span>
         </h2>
         <div class="coffee__button-wrapper">
-          <button class="product-switch product-switch--active" type="button" aria-label="Coffee">
+          <button class="product-switch product-switch--active" type="button" aria-label="Coffee" data-category="coffee">
             <span class="product-switch__item product-switch__item--coffee">
               <span class="product-switch__icon"></span>
             </span>
             <span class="product-switch__text">Coffee</span>
           </button>
-          <button class="product-switch" type="button" aria-label="Tea">
+          <button class="product-switch" type="button" aria-label="Tea" data-category="tea">
             <span class="product-switch__item product-switch__item--tea">
               <span class="product-switch__icon"></span>
             </span>
             <span class="product-switch__text">Tea</span>
           </button>
-          <button class="product-switch" type="button" aria-label="Dessert">
+          <button class="product-switch" type="button" aria-label="Dessert" data-category="dessert">
             <span class="product-switch__item product-switch__item--dessert">
               <span class="product-switch__icon"></span>
             </span>
@@ -106,8 +107,7 @@
       </div>
     </footer>
   </div>
-  <script type="module" src="/src/js/main.js"></script>
-  <script type="module" src="/src/js/menu.js"></script>
+  <script type="module" src="./src/js/menu.js"></script>
 </body>
 
 </html>

@@ -27,6 +27,7 @@
           <li class="navigation__item"><a href="#mobile-app" class="navigation__link">Mobile app</a></li>
           <li class="navigation__item"><a href="#contact-us" class="navigation__link">Contact us</a></li>
         </ul>
+        <a class="menu menu--active menu__mobile" href="./menu.html">Menu</a>
       </nav>
       <div class="header__actions">
         <button class="theme-switch" type="button" aria-label="Toggle theme">
@@ -60,7 +61,7 @@
             warm and inviting space to enjoy their favorite beverage.
           </p>
 
-          <button class="hero__button button-primary" type="button">Menu</button>
+          <a class="hero__button button-primary" href="menu.html">Menu</a>
         </div>
       </section>
       <section class="favorite-coffee" id="favorite-coffee">
@@ -71,31 +72,40 @@
               <button class="slider__arrow slider__arrow_left" type="button" aria-label="Left"><span
                   class="slider__arrow-icon slider__arrow-icon_left"></span></button>
             </div>
-            <div class="slider__images">
-              <div class="slider__slide slider__slide_1 slider__slide_active"></div>
-              <div class="slider__slide slider__slide_2"></div>
-              <div class="slider__slide slider__slide_3"></div>
+            <div class="slider__viewport">
+              <div class="slider__images">
+                <div class="slider__slide slider__slide_1"></div>
+                <div class="slider__slide slider__slide_2"></div>
+                <div class="slider__slide slider__slide_3"></div>
+              </div>
             </div>
             <div class="button__container"><button class="slider__arrow slider__arrow_right" type="button"
                 aria-label="Right"><span class="slider__arrow-icon slider__arrow-icon_right"></span></button></div>
           </div>
-          <div class="slider__info slider__info_active">
-            <h3 class="slider__title">S’mores Frappuccino</h3>
-            <div class="slider__text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before
-              being topped with oat milk.</div>
-            <div class="slider__price">$5.50</div>
-          </div>
-          <div class="slider__info">
-            <h3 class="slider__title">Caramel Macchiato</h3>
-            <div class="slider__text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream
-              under whipped thick foam.</div>
-            <div class="slider__price">$5.00</div>
-          </div>
-          <div class="slider__info">
-            <h3 class="slider__title">Ice coffee</h3>
-            <div class="slider__text">A popular summer drink that tones and invigorates. Prepared from coffee, milk and
-              ice.</div>
-            <div class="slider__price">$4.50</div>
+          <div class="slider__info-viewport">
+            <div class="slider__info-wrapper">
+              <div class="slider__info">
+                <h3 class="slider__title">S’mores Frappuccino</h3>
+                <div class="slider__text">This new drink takes an espresso and mixes it with brown sugar and cinnamon
+                  before
+                  being topped with oat milk.</div>
+                <div class="slider__price">$5.50</div>
+              </div>
+              <div class="slider__info">
+                <h3 class="slider__title">Caramel Macchiato</h3>
+                <div class="slider__text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with
+                  cream
+                  under whipped thick foam.</div>
+                <div class="slider__price">$5.00</div>
+              </div>
+              <div class="slider__info">
+                <h3 class="slider__title">Ice coffee</h3>
+                <div class="slider__text">A popular summer drink that tones and invigorates. Prepared from coffee, milk
+                  and
+                  ice.</div>
+                <div class="slider__price">$4.50</div>
+              </div>
+            </div>
           </div>
           <div class="slider__pagination">
             <div class="slider__control slider__control_active"></div>
@@ -182,7 +192,7 @@
       </div>
     </footer>
   </div>
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="./src/js/index.js"></script>
 </body>
 
 </html>
